@@ -1,8 +1,10 @@
 from flask import Flask
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'sshh'
+app.config['EXPLAIN_TEMPLATE_LOADING'] = True
 
-from app import routes
+import routes
 
-if __name__ == "main" :
+if __name__ == "main":
     app.run(debug=True)

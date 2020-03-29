@@ -1,0 +1,10 @@
+{% block content %}
+<div class="formwrapper">
+  <h2 class="title">You must have clothes!</h2>
+  <form method="POST" action="/">
+    {{ form.hidden_tag() }}
+    <div class="form-field">{{ form.recording_url.label }} {{ form.recording_url(size=200) }}</div>
+      {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}
